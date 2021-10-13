@@ -18,4 +18,7 @@ jobs:
           port: ${{ secrets.REMOTE_SSH_PORT }}
           script: |
             echo hello!
-
+            cd action-tutorials
+            git pull
+            npm install
+            pm2 reload all
