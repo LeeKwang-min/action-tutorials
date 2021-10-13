@@ -18,5 +18,5 @@ jobs:
           port: ${{ secrets.REMOTE_SSH_PORT }}
           script: |
             cd action-tutorials
-            sudo git pull
+            git pull
 
