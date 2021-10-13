@@ -17,6 +17,5 @@ jobs:
           key: ${{ secrets.REMOTE_SSH_KEY }}
           port: ${{ secrets.REMOTE_SSH_PORT }}
           script: |
-            cd action-tutorials
-            git pull
+            echo hello!
 
