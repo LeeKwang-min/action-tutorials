@@ -19,6 +19,4 @@ jobs:
           script: |
             cd action-tutorials
             sudo git pull
-            #sudo yarn
-            #sudo yarn build
-            #pm2 reload all
+
