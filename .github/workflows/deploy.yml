@@ -9,16 +9,12 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - name: Deploy
+      - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_IP }}
-          username: ${{ secrets.REMOTE_SSH_ID }}
-          key: ${{ secrets.REMOTE_SSH_KEY }}
+          username: ${{ secrets.REMOTE_SSH_USERNAME }}
+          password: ${{ secrets.REMOTE_SSH_PASSWORD }}
           port: ${{ secrets.REMOTE_SSH_PORT }}
-          script: |
-            echo hello!
-            cd action-tutorials
-            git pull
-            npm install
-            pm2 reload all
+          script: whoami
+          
